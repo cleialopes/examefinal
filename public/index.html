@@ -1,0 +1,59 @@
+<!-- Jozicleia Lopes de Lima -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda jozicleia</title>
+    <link rel="icon" href="img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.webp" alt="logo">
+        </div>
+        <h1>La Tela Suelta</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="suscripcion.html">Entrar/Registrarme</a></li>
+                <li><a href="#" class="cart" onclick="mostrarCarrito()">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="productos">
+            <h2>Productos Destacados</h2>
+            <div class="producto" onclick="mostrarDetalles('Camiseta Amarrilla', 'img/amarillo.jpg', '$50.00', 'Una camiseta cómoda y elegante de color amarillo.')">
+                <img src="img/amarillo.jpg" alt="Camiseta Amarrilla">
+                <h3>Camiseta Amarrilla</h3>
+                <p>Precio: $50.00</p>
+                <button onclick="agregarAlCarrito('Camiseta Amarrilla', 50)">Añadir al carrito</button>
+            </div>
+            <div class="producto" onclick="mostrarDetalles('Camisa Azul', 'img/azul.jpg', '$30.00', 'Una camisa de color azul, ideal para cualquier ocasión.')">
+                <img src="img/azul.jpg" alt="Camisa Azul">
+                <h3>Camisa Azul</h3>
+                <p>Precio: $30.00</p>
+                <button onclick="agregarAlCarrito('Camisa Azul', 30)">Añadir al carrito</button>
+            </div>
+            <div class="producto" onclick="mostrarDetalles('Camiseta Verde', 'img/verde.webp', '$40.00', 'Una camiseta verde ecológica y cómoda para el uso diario.')">
+                <img src="img/verde.webp" alt="Camiseta Verde">
+                <h3>Camiseta Verde</h3>
+                <p>Precio: $40.00</p>
+                <button onclick="agregarAlCarrito('Camiseta Verde', 40)">Añadir al carrito</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 La Tela Suelta. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
