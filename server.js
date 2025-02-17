@@ -5,17 +5,17 @@ const path = require('path');
 const app = express();
 app.use(express.json()); // Middleware para parsear JSON
 
-// 📌 Sirve la carpeta "public" como archivos estáticos
+// Sirve la carpeta "public" como archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 
 const filePath = path.join(__dirname, 'data/suscriptores.json');
 
-// 📌 Ruta para la página principal
+// Ruta para la página principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'suscripcion.html'));
 });
 
-// 📌 API: Obtener todos los suscriptores
+// API: Obtener todos los suscriptores
 app.get('/api/suscriptores', async (req, res) => {
     try {
         const data = await fs.readFile(filePath, 'utf8');
@@ -26,7 +26,7 @@ app.get('/api/suscriptores', async (req, res) => {
     }
 });
 
-// 📌 API: Añadir un nuevo suscriptor
+// API: Añadir un nuevo suscriptor
 app.post('/api/suscriptores', async (req, res) => {
     try {
         const newUsuario = req.body;
@@ -48,8 +48,8 @@ app.post('/api/suscriptores', async (req, res) => {
     }
 });
 
-// 📌 Iniciar el servidor
+// Iniciar el servidor
 app.listen(3000, () => {
-    console.log('✅ Server running on http://localhost:3000');
+    console.log('Server running on http://localhost:3000');
 });
 
