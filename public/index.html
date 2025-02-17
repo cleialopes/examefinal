@@ -1,24 +1,24 @@
-<!-- Jozicleia Lopes de Lima -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda jozicleia</title>
+    <title>Sole & Style</title>
     <link rel="icon" href="img/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/43d19060f3.js" crossorigin="anonymous"></script> <!--para que se vea la i-->
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="img/logo.webp" alt="logo">
         </div>
-        <h1>La Tela Suelta</h1>
+        <h1>Sole & Style</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="#">Contacto</a></li>
-                <li><a href="suscripcion.html">Entrar/Registrarme</a></li>
+                <li><a href="suscripcion.html"><i class="fa-regular fa-user"></i>Entrar</a></li>
                 <li><a href="#" class="cart" onclick="mostrarCarrito()">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
@@ -26,23 +26,38 @@
     <main>
         <section class="productos">
             <h2>Productos Destacados</h2>
-            <div class="producto" onclick="mostrarDetalles('Camiseta Amarrilla', 'img/amarillo.jpg', '$50.00', 'Una camiseta cómoda y elegante de color amarillo.')">
-                <img src="img/amarillo.jpg" alt="Camiseta Amarrilla">
-                <h3>Camiseta Amarrilla</h3>
+            <div class="producto">
+                <img src="img/zapato-lazos.png" alt="Zapato con lazos">
+                <h3>Zapato con Lazos</h3>
                 <p>Precio: $50.00</p>
-                <button onclick="agregarAlCarrito('Camiseta Amarrilla', 50)">Añadir al carrito</button>
+                <div class="tallas-container">
+                    <button class="tallas">37</button>
+                    <button class="tallas">39</button>
+                    <button class="tallas">40</button>
+                </div>
+                <button>Añadir al carrito</button>
             </div>
-            <div class="producto" onclick="mostrarDetalles('Camisa Azul', 'img/azul.jpg', '$30.00', 'Una camisa de color azul, ideal para cualquier ocasión.')">
-                <img src="img/azul.jpg" alt="Camisa Azul">
-                <h3>Camisa Azul</h3>
+            <div class="producto">
+                <img src="img/zapato-negro.png" alt="zapato Negro">
+                <h3>Zapato Negro</h3>
                 <p>Precio: $30.00</p>
-                <button onclick="agregarAlCarrito('Camisa Azul', 30)">Añadir al carrito</button>
+                <div class="tallas-container">
+                    <button class="tallas">36</button>
+                    <button class="tallas">38</button>
+                    <button class="tallas">39</button>
+                </div>
+                <button>Añadir al carrito</button>
             </div>
-            <div class="producto" onclick="mostrarDetalles('Camiseta Verde', 'img/verde.webp', '$40.00', 'Una camiseta verde ecológica y cómoda para el uso diario.')">
-                <img src="img/verde.webp" alt="Camiseta Verde">
-                <h3>Camiseta Verde</h3>
+            <div class="producto">
+                <img src="img/zapato-rojo.png" alt="zapato Vino">
+                <h3>Zapato Vino</h3>
                 <p>Precio: $40.00</p>
-                <button onclick="agregarAlCarrito('Camiseta Verde', 40)">Añadir al carrito</button>
+                <div class="tallas-container">
+                    <button class="tallas">35</button>
+                    <button class="tallas">37</button>
+                    <button class="tallas">39</button>
+                </div>
+                <button>Añadir al carrito</button>
             </div>
         </section>
     </main>
@@ -54,6 +69,13 @@
             <a href="#">Twitter</a>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll(".tallas").forEach((button) => {
+            button.addEventListener("click", function () {
+                document.querySelectorAll(".tallas").forEach((btn) => btn.classList.remove("selected"));
+                this.classList.add("selected");
+            });
+        });
+    </script>
 </body>
 </html>

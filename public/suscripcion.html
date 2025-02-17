@@ -6,8 +6,23 @@
     <title>Formulario de Inscripción</title>
     <link rel="icon" href="img/logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/43d19060f3.js" crossorigin="anonymous"></script> <!--para que se vea la i-->
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="img/logo.webp" alt="logo">
+        </div>
+        <h1>Sole & Style</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="suscripcion.html"><i class="fa-regular fa-user"></i>Entrar</a></li>
+                <li><a href="#" class="cart" onclick="mostrarCarrito()">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <section class="form-section">
             <div class="form-container">
@@ -30,6 +45,14 @@
             </div>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2025 La Tela Suelta. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
