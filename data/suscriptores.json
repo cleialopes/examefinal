@@ -8,5 +8,10 @@
     "nombre": "Jozicleia Lopes",
     "email": "juan@gmail.com",
     "password": "1234"
+  },
+  {
+    "nombre": "sara",
+    "email": "sara@gmail.com",
+    "password": "123456"
   }
 ]
